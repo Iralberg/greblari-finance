@@ -31,9 +31,24 @@
                         </span></label>
                     <input type="password" name="senha" id="senha" autocomplete="current-password" placeholder="Sua senha">
                 </div>
+                <input type="button" value="Entrar" id="botao" onclick="login()">
             </form>
         </div>
     </main>
+    <script>
+        let email=document.getElementById('email')
+        let senha=document.getElementById('senha')
+        function login(){
+            if(email.value==='robopelado456@gmail.com' && senha.value==='iraldo123')
+        {
+            window.location.href='paginas/pag01.html'
+        }else{
+            alert('Erro[ ], Email ou senha incorretos')
+        }
+        email.value=''
+        senha.value=''
+        }
+    </script>
 </body>
 
 </html>

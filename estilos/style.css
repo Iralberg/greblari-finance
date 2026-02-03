@@ -26,8 +26,7 @@ main#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    
-    width: 400px;
+    width: 300px;
     height: 600px;
     border-radius: 10px;
     background-color: white;
@@ -63,8 +62,6 @@ div.campo{
     background-color:#3724E0 ; 
     margin: 10px 10px;
     border-radius: 8px;
-    padding: 0px;
-    
     font-size: 11px;
 }
 
@@ -80,9 +77,24 @@ div.campo{
 }
 .campo >label > span{
    color: white;
-   
-    font-size: 2.9em;
+   font-size: 2.9em;
 } 
 input:focus-within{
     background-color:white ;
+}
+#botao{
+    display: block;
+    background-color: rgb(33, 199, 135);
+    font-size: 20px;
+    width: 90%;
+    margin:10px;
+    padding: 10px;
+border: none;
+font-weight: bold;
+cursor: pointer;
+color: white;
+    border-radius:10px ;
+}
+#botao:hover{
+    background-color: rgb(0, 128, 96);
 }
