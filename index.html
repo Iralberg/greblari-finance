@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greblari Login</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+
+<body>
+    <main id="login">
+        <div id="foto"></div>
+        <div id="formulario">
+            <h1>Login</h1>
+            <p>Seja Bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu
+                ambiente.</p>
+            <form action="script.js" method="post">
+                <div class="campo">
+                    <label for="email"><span class="material-symbols-outlined">
+                            person
+                        </span></label>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="Seu email">
+                </div>
+                <div class="campo">
+                    <label for="senha"><span class="material-symbols-outlined">
+                            vpn_key
+                        </span></label>
+                    <input type="password" name="senha" id="senha" autocomplete="current-password" placeholder="Sua senha">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

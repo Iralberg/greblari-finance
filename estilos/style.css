@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/* cores
+#3724E0
+#2488E0
+#244CE1
+#24C4E0
+*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(62, 62, 228);
+}
+
+main#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s,hegth 0.4s;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.479);
+}
+
+div#formulario {
+    margin-top: 20px;
+
+}
+#formulario > h1{
+    text-align: center;
+}
+#formulario>p {
+    padding: 10px;
+
+}
+
+div#foto {
+    display: block;
+    background-image: url(../imagens/banco.jpg);
+    background-position: left center;
+    width: 400px;
+    min-height: 200px;
+
+}
+div.campo{
+    display: block;
+    width: 90%;
+    background-color:#3724E0 ; 
+    margin: 10px 10px;
+    border-radius: 8px;
+    padding: 0px;
+    
+    font-size: 11px;
+}
+
+.campo > input{
+    font-size: 18px;
+    padding: 9px;
+    border-radius: 10px;
+    width:calc(100% - 60px);
+    margin-bottom: 7px;
+    background-color: #24C4E0;
+    transform: translateY(4px);
+    border: none;
+}
+.campo >label > span{
+   color: white;
+   
+    font-size: 2.9em;
+} 
+input:focus-within{
+    background-color:white ;
+}
