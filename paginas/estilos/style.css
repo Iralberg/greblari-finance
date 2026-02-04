@@ -9,19 +9,24 @@
     margin: 0px;
 }
 body{
-    background-color: #13E08E;
+    background-color: #84e0ba;
 }
 header{
     text-align: center;
-    background-color: var(--cor01);
+   
+    background-image: linear-gradient(to top,#12e050,#3cdfa9);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 header > p {
 padding-bottom: 10px;
 }
+nav{
+  background-color: #26E012;
+ 
+}
 .listas{
-    display: none;
+  display: none;
 }
 .listas > li > a{
 text-decoration: none;
@@ -34,6 +39,13 @@ color: black;
   
     font-size: 30px;
 }
+.listas > li:hover{
+    background-color: rgb(38, 156, 38);
+    color: white;
+    }
+    .listas > li> a:hover{
+      color: white;
+    }
 #icone{
     width: 100%;
     display: block;
@@ -50,4 +62,76 @@ color: black;
 }
 .hide{
     display: block;
+}
+#cadastro {
+  width: 200px;
+
+  padding: 20px;
+  margin: 40px auto;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#cadastro input,
+#cadastro select,
+#cadastro button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+#cadastro button {
+  background: #2e86de;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#msg {
+  text-align: center;
+}
+#listaUsuarios {
+  width: 300px;
+  
+  margin: 20px auto;
+   background-color: #12ABE0;
+
+}
+
+.usuario {
+  background: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+}
+
+.usuario strong {
+  display: block;
+}
+
+#editarBox{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+text-align: center;
+width: 50vw;
+height: 50vh;
+margin: auto;
+background-color: #ffffff;
+}
+#editarBox > h3{
+background-color: #12ABE0;
+}
+.salvar{
+  background-color: #26E012;
+  border: none;
+  padding: 3px;
+}
+.excluir{
+  background-color: red;
+  border: none;
+  padding: 3px;
 }

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/*Typical Device breakpoints
+    Pequenas telas: até 600px
+    Celular: de 600px até 768px
+    Tablet: 768px até 992px
+    desktop: 992px até  1200px
+    Grandes telas: acima de  1200px
+*/
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    nav {
+        padding: 7px 0px;
+    
+    }
+    .listas{
+        display: block;
+    }
+nav >ul> li{
+    margin-left: 10px;
+}
+
+    #icone {
+        display: none;
+    }
+
+    .listas>li {
+        text-decoration: none;
+        color: black;
+        display: inline;
+        padding: 5px;
+        border: none;
+        border-radius: 8px;
+    }
+    
+   
+    #cadastro{
+        width: 400px;
+    }
+    #listaUsuarios{
+        width: 450px;
+        border-radius:8px ;
+    }
+    #listaUsuarios > h4{
+text-align: center;
+    }
+}
+@media screen and (min-width:992px) {
+    nav {
+      
+        padding: 7px 0px;
+        text-align: left;
+    }
+    .listas{
+        display: block;
+    }
+nav >ul> li{
+    margin-left: 60px;
+}
+    #icone {
+        display: none;
+    }
+
+    .listas>li {
+        text-decoration: none;
+        color: black;
+        display: inline;
+        padding: 5px;
+        border: none;
+        border-radius: 8px;
+        align-items: left;
+    }
+    #cadastro{
+        width: 500px;
+    }
+    #listaUsuarios{
+        
+       
+        width: 450px;
+        border-radius:8px ;
+        
+    }
+    #listaUsuarios > h4{
+text-align: center;
+    }
+}

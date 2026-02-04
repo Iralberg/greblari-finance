@@ -2,31 +2,87 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greblari Finance</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greblari Finance</title>
+  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="estlos/media-query.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 
-<body>
-    <header>
-        <h1>Greblari Finance</h1>
-        <p>Seja bem-vindo(a), aproveite o nosso sistema</p>
-        <nav id="menu">
-            <div id="icone" onclick="Abrirmenu()">
-                <span class="material-symbols-outlined" >
-                menu
-            </span> 
-            </div>
-           
-            <ul class="listas">
-                <li><a href="#">Criar conta</a></li>
-                <li><a href="#">Ver Contas criadas</a></li>
-                <li><a href="#">Conversão de dinheiro</a></li>
-            </ul>
-        </nav>
-    </header>
+<body onresize="mudarTela()">
+  <header>
+    <h1>Greblari Finance</h1>
+    <p>Seja bem-vindo(a), aproveite o nosso sistema</p>
+    <nav id="menu">
+      <div id="icone" onclick="Abrirmenu()">
+        <span class="material-symbols-outlined">
+          menu
+        </span>
+      </div>
+
+      <ul class="listas">
+        <li><a href="#">Criar conta</a></li>
+        <li><a href="#"><a href="#" onclick="mostrarUsuarios()">Ver Contas criadas</a></li>
+        <li>Conversão de dinheiro</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="cadastro">
+    <h2>Criar Usuário</h2>
+
+    <input type="text" id="nome" placeholder="Nome do usuário">
+
+    <select id="banco">
+      <option value="">Selecione o banco</option>
+      <option value="Nubank">Nubank</option>
+      <option value="Inter">Inter</option>
+      <option value="Caixa Tem">Caixa Tem</option>
+      <option value="Bradesco">Bradesco</option>
+      <option value="PicPay">PicPay</option>
+      <option value="Mercado Pago">Mercado Pago</option>
+      <option value="Banco do Brasil">Banco do Brasil</option>
+    </select>
+
+    <input type="number" id="saldo" placeholder="Saldo inicial">
+
+    <button onclick="cadastrar()">Cadastrar</button>
+   
+    <p id="msg"></p>
+  </div>
+
+  <div id="listaUsuarios">
+    <h2>Usuários Cadastrados</h2>
+    <div id="usuarios"></div>
+  </div>
+  <div id="editarBox" style="display:none;">
+    <h3>Editar Usuário</h3>
+
+    <input type="text" id="editNome">
+    <select id="editBanco">
+      <option value="">Selecione o banco</option>
+      <option value="Nubank">Nubank</option>
+      <option value="Inter">Inter</option>
+      <option value="Caixa Tem">Caixa Tem</option>
+      <option value="Bradesco">Bradesco</option>
+      <option value="PicPay">PicPay</option>
+      <option value="Mercado Pago">Mercado Pago</option>
+      <option value="Banco do Brasil">Banco do Brasil</option>
+    </select>
+
+    <input type="number" id="editValor" placeholder="Valor">
+
+    <select id="acao">
+      <option value="deposito">Depósito</option>
+      <option value="saque">Saque</option>
+      <option value="editar">Editar dados</option>
+    </select>
+
+    <button onclick="salvarEdicao()" class="salvar">Salvar</button>
+    <button onclick="fecharEditar()" class="excluir">Cancelar</button>
+  </div>
+
 </body>
 <script src="script.js"></script>
+
 </html>
