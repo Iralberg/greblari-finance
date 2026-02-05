@@ -39,7 +39,7 @@ color: black;
   
     font-size: 30px;
 }
-.listas > li:hover{
+li:hover{
     background-color: rgb(38, 156, 38);
     color: white;
     }
@@ -61,7 +61,7 @@ color: black;
     font-size: 30px;
 }
 .hide{
-    display: block;
+    display: none;
 }
 #cadastro {
   width: 200px;
@@ -91,9 +91,22 @@ color: black;
 #msg {
   text-align: center;
 }
+#ContainerConta{
+  margin: auto;
+  width: 290px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #12ABE0;
+  color: white;
+  padding: 5px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+#ContainerConta > h1{
+  color: rgb(0, 0, 0);
+}
 #listaUsuarios {
   width: 300px;
-  
   margin: 20px auto;
    background-color: #12ABE0;
 
@@ -117,10 +130,10 @@ color: black;
   left: 50%;
   transform: translate(-50%,-50%);
 text-align: center;
-width: 50vw;
+width: 80vw;
 height: 50vh;
 margin: auto;
-background-color: #ffffff;
+background-color: #c7c3c3;
 }
 #editarBox > h3{
 background-color: #12ABE0;

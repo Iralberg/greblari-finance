@@ -3,12 +3,54 @@ let listas=document.querySelector('.listas')
 let usuarioEditando = null;
 let cadastro=document.querySelector("#cadastro")
 let listaUser=document.querySelector('#listaUsuarios')
+const ContainerConta=document.querySelector('#ContainerConta')
+const caixaConta=document.querySelector('#caixaConta')
+
+function render(){
+contasCriadas();
+listarUsuarios();
+mostrarUsuarios()
+}
+render()
 function Abrirmenu() {
      
       listas.classList.toggle('hide')
 }
+function cadastrar() {
+        const nome = document.getElementById("nome").value.trim();
+        const banco = document.getElementById("banco").value;
+        const saldo = document.getElementById("saldo").value;
+        const msg = document.getElementById("msg");
 
+        if (nome === "" || banco === "" || saldo === "") {
+                msg.innerText = "Preencha todos os campos!";
+                msg.style.color = "red";
+                return;
+        }
 
+        const usuarios = getUsuarios();
+
+        const usuario = {
+                id: Date.now(),
+                nome: nome,
+                banco: banco,
+                saldo: Number(saldo)
+        };
+
+        usuarios.push(usuario);
+        salvarUsuarios(usuarios);
+
+        msg.innerText = "Usuário cadastrado com sucesso!";
+        msg.style.color = "green";
+
+        // limpar campos
+        document.getElementById("nome").value = "";
+        document.getElementById("banco").value = "";
+        document.getElementById("saldo").value = "";
+      
+      
+render()
+}
 function criarUsuario(nome, banco, saldoInicial) {
         const usuarios = getUsuarios();
 
@@ -24,6 +66,14 @@ function criarUsuario(nome, banco, saldoInicial) {
 
         console.log("Usuário criado:", novoUsuario);
 }
+function contasCriadas(){
+         const usuarios = getUsuarios();
+        
+         usuarios.forEach(item =>{
+           caixaConta.innerHTML=`<p>Total  = ${usuarios.length}</p>`
+         })
+}
+
 function listarUsuarios() {
         const usuarios = getUsuarios();
 
@@ -82,40 +132,9 @@ function salvarUsuarios(usuarios) {
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 
-function cadastrar() {
-        const nome = document.getElementById("nome").value.trim();
-        const banco = document.getElementById("banco").value;
-        const saldo = document.getElementById("saldo").value;
-        const msg = document.getElementById("msg");
-
-        if (nome === "" || banco === "" || saldo === "") {
-                msg.innerText = "Preencha todos os campos!";
-                msg.style.color = "red";
-                return;
-        }
-
-        const usuarios = getUsuarios();
-
-        const usuario = {
-                id: Date.now(),
-                nome: nome,
-                banco: banco,
-                saldo: Number(saldo)
-        };
-
-        usuarios.push(usuario);
-        salvarUsuarios(usuarios);
-
-        msg.innerText = "Usuário cadastrado com sucesso!";
-        msg.style.color = "green";
-
-        // limpar campos
-        document.getElementById("nome").value = "";
-        document.getElementById("banco").value = "";
-        document.getElementById("saldo").value = "";
-      
-        mostrarUsuarios();
-
+function exibirUsuarios(){
+        listaUser.classList.toggle('hide')
+        render()
 }
 function mostrarUsuarios() {
   const divUsuarios = document.getElementById("usuarios");
@@ -140,6 +159,7 @@ function mostrarUsuarios() {
       </div>
     `;
   });
+contasCriadas()
 }
 
 
@@ -160,8 +180,8 @@ function abrirEditar(id) {
   document.getElementById("editNome").value = usuarioEditando.nome;
   document.getElementById("editBanco").value = usuarioEditando.banco;
   document.getElementById("editValor").value = "";
-
   document.getElementById("editarBox").style.display = "block";
+  contasCriadas()
 }
 
 function salvarEdicao() {
@@ -191,10 +211,10 @@ function salvarEdicao() {
   salvarUsuarios(usuarios);
   mostrarUsuarios();
   fecharEditar();
+  contasCriadas();
 }
 function fecharEditar() {
   document.getElementById("editarBox").style.display = "none";
   usuarioEditando = null;
 }
 
-mostrarUsuarios();
