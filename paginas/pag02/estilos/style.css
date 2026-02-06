@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+}
+main{
+    
+    width: 300px;
+    background-color: aquamarine;
+    margin: auto;
+    padding: 5px;
+
+}
+.container{
+    margin-top: -20px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+main > h1{
+    font-size: 28px;
+    text-align: center;
+}

@@ -12,6 +12,7 @@ listarUsuarios();
 mostrarUsuarios()
 }
 render()
+
 function Abrirmenu() {
      
       listas.classList.toggle('hide')
@@ -133,7 +134,7 @@ function salvarUsuarios(usuarios) {
 }
 
 function exibirUsuarios(){
-        listaUser.classList.toggle('hide')
+        listaUser.classList.toggle('hidden')
         render()
 }
 function mostrarUsuarios() {

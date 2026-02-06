@@ -61,7 +61,10 @@ li:hover{
     font-size: 30px;
 }
 .hide{
-    display: none;
+    display: block;
+}
+.hidden{
+  display: none;
 }
 #cadastro {
   width: 200px;
