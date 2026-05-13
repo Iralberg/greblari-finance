@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 
-<body onresize="mudarTela()">
+<body>
   <header>
     <h1>Greblari Finance</h1>
     <p>Seja bem-vindo(a), aproveite o nosso sistema</p>
@@ -21,9 +21,9 @@
         </span>
       </div>
 
-      <ul class="listas" >
+      <ul class="listas">
         <li><a href="#">Criar conta</a></li>
-        <li onclick="exibirUsuarios()"> <a href="#listaUsuarios" >Ver Contas criadas</a></li>
+        <li onclick="exibirUsuarios()"> <a href="#listaUsuarios">Ver Contas criadas</a></li>
         <li><a href="../pag02/pag02.html">Conversão de dinheiro</a></li>
       </ul>
     </nav>
@@ -57,11 +57,12 @@
     <p id="msg"></p>
   </div>
 
-  <div id="listaUsuarios" class="hidden">
+  <div id="listaUsuarios" class="hidden show">
     <h2>Usuários Cadastrados</h2>
     <div id="usuarios"></div>
   </div>
-  <div id="editarBox" style="display:none;">
+
+  <div id="editarBox" class="hidden">
     <h3>Editar Usuário</h3>
     <label for="editNome">Nome:</label>
     <input type="text" id="editNome">
@@ -88,7 +89,6 @@
     <button onclick="salvarEdicao()" class="salvar">Salvar</button>
     <button onclick="fecharEditar()" class="excluir">Cancelar</button>
   </div>
-
 </body>
 <script src="script.js"></script>
 

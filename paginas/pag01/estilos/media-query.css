@@ -11,14 +11,16 @@
 @media screen and (min-width:768px) and (max-width:992px) {
     nav {
         padding: 7px 0px;
-    
+
     }
-    .listas{
+
+    .listas {
         display: block;
     }
-nav >ul> li{
-    margin-left: 10px;
-}
+
+    nav>ul>li {
+        margin-left: 10px;
+    }
 
     #icone {
         display: none;
@@ -32,31 +34,43 @@ nav >ul> li{
         border: none;
         border-radius: 8px;
     }
-    
-   
-    #cadastro{
+
+
+    #cadastro {
         width: 400px;
     }
-    #listaUsuarios{
+
+    #listaUsuarios {
         width: 450px;
-        border-radius:8px ;
+        border-radius: 8px;
     }
-    #listaUsuarios > h4{
-text-align: center;
+
+    #listaUsuarios>h4 {
+        text-align: center;
+    }
+     #editarBox{
+        font-size: 20px;
+    }
+    #editarBox input,select{
+        font-size: 16px;
     }
 }
+
 @media screen and (min-width:992px) {
     nav {
-      
+
         padding: 7px 0px;
         text-align: left;
     }
-    .listas{
+
+    .listas {
         display: block;
     }
-nav >ul> li{
-    margin-left: 60px;
-}
+
+    nav>ul>li {
+        margin-left: 60px;
+    }
+
     #icone {
         display: none;
     }
@@ -70,17 +84,25 @@ nav >ul> li{
         border-radius: 8px;
         align-items: left;
     }
-    #cadastro{
+
+    #cadastro {
         width: 500px;
     }
-    #listaUsuarios{
-        
-       
+
+    #listaUsuarios {
+
+
         width: 450px;
-        border-radius:8px ;
-        
+        border-radius: 8px;
+
     }
-    #listaUsuarios > h4{
-text-align: center;
+    #editarBox{
+        font-size: 30px;
+    }
+    #editarBox input,select{
+        font-size: 26px;
+    }
+    #listaUsuarios>h4 {
+        text-align: center;
     }
 }

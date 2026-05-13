@@ -131,6 +131,7 @@ function getUsuarios() {
 
 function salvarUsuarios(usuarios) {
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
+      
 }
 
 function exibirUsuarios(){
@@ -153,7 +154,10 @@ function mostrarUsuarios() {
       <div class="usuario">
         <strong>Nome:${u.nome}</strong>
         Banco: ${u.banco}<br>
-        Saldo: R$ ${u.saldo.toFixed(2)}<br>
+        Saldo: ${u.saldo.toLocaleString("pt-BR", {
+  style: "currency",
+  currency: "BRL"
+})}<br>
 
         <button onclick="abrirEditar(${u.id})" class='salvar'>Editar</button>
         <button onclick="excluirUsuario(${u.id})"class='excluir'>Excluir</button>
@@ -180,8 +184,8 @@ function abrirEditar(id) {
 
   document.getElementById("editNome").value = usuarioEditando.nome;
   document.getElementById("editBanco").value = usuarioEditando.banco;
-  document.getElementById("editValor").value = "";
-  document.getElementById("editarBox").style.display = "block";
+  document.getElementById("editValor").value =  usuarioEditando.saldo;
+  document.getElementById("editarBox").classList.remove('hidden');
   contasCriadas()
 }
 
@@ -207,7 +211,9 @@ function salvarEdicao() {
   if (acao === "editar") {
     usuarios[index].nome = document.getElementById("editNome").value;
     usuarios[index].banco = document.getElementById("editBanco").value;
+  usuarios[index].saldo= Number(document.getElementById("editValor").value);
   }
+  console.log(usuarioEditando)
 
   salvarUsuarios(usuarios);
   mostrarUsuarios();
@@ -215,7 +221,9 @@ function salvarEdicao() {
   contasCriadas();
 }
 function fecharEditar() {
-  document.getElementById("editarBox").style.display = "none";
+  let containerEditor=document.getElementById("editarBox");
+  containerEditor.classList.add('hidden')
+  containerEditor.classList.remove('show')
   usuarioEditando = null;
 }
 
