@@ -32,3 +32,13 @@ main > h1{
     font-size: 28px;
     text-align: center;
 }
+.btn-voltar{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 4px;
+}
+a{
+    text-decoration: none;
+}
