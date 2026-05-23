@@ -176,18 +176,7 @@ function excluirUsuario(id) {
   salvarUsuarios(usuarios);
   mostrarUsuarios();
 }
-function abrirEditar(id) {
-  const usuarios = getUsuarios();
-  usuarioEditando = usuarios.find(u => u.id === id);
 
-  if (!usuarioEditando) return;
-
-  document.getElementById("editNome").value = usuarioEditando.nome;
-  document.getElementById("editBanco").value = usuarioEditando.banco;
-  document.getElementById("editValor").value =  usuarioEditando.saldo;
-  document.getElementById("editarBox").classList.remove('hidden');
-  contasCriadas()
-}
 
 function salvarEdicao() {
   const usuarios = getUsuarios();
@@ -221,9 +210,19 @@ function salvarEdicao() {
   contasCriadas();
 }
 function fecharEditar() {
-  let containerEditor=document.getElementById("editarBox");
-  containerEditor.classList.add('hidden')
-  containerEditor.classList.remove('show')
+  document.getElementById("container-pop").classList.add('hidden');
   usuarioEditando = null;
 }
 
+function abrirEditar(id) {
+  const usuarios = getUsuarios();
+  usuarioEditando = usuarios.find(u => u.id === id);
+
+  if (!usuarioEditando) return;
+
+  document.getElementById("editNome").value = usuarioEditando.nome;
+  document.getElementById("editBanco").value = usuarioEditando.banco;
+  document.getElementById("editValor").value =  usuarioEditando.saldo;
+  document.getElementById("container-pop").classList.remove('hidden');
+  contasCriadas()
+}

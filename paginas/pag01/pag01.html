@@ -62,33 +62,56 @@
     <div id="usuarios"></div>
   </div>
 
-  <div id="editarBox" class="hidden">
+  <section  id="container-pop" class="container-pop">
+   
+       <div id="editarBox" class="editar-box">
     <h3>Editar Usuário</h3>
-    <label for="editNome">Nome:</label>
-    <input type="text" id="editNome">
-    <label for="editBanco">Banco</label>
-    <select id="editBanco">
-      <option value="">Selecione o banco</option>
-      <option value="Nubank">Nubank</option>
-      <option value="Inter">Inter</option>
-      <option value="Caixa Tem">Caixa Tem</option>
-      <option value="Bradesco">Bradesco</option>
-      <option value="PicPay">PicPay</option>
-      <option value="Mercado Pago">Mercado Pago</option>
-      <option value="Banco do Brasil">Banco do Brasil</option>
-    </select> <br>
-    <label for="editValor">Valor:</label>
-    <input type="number" id="editValor" placeholder="Valor">
 
-    <select id="acao">
-      <option value="deposito">Depósito</option>
-      <option value="saque">Saque</option>
-      <option value="editar">Editar dados</option>
-    </select>
+    <div class="editar-campos" id="campo1">
+      <label for="editNome">Nome:</label>
+      <input type="text" id="editNome">
+    </div>
 
-    <button onclick="salvarEdicao()" class="salvar">Salvar</button>
-    <button onclick="fecharEditar()" class="excluir">Cancelar</button>
+    
+
+    <div class="editar-campos" id="campo2">
+      <label for="editBanco">Banco</label>
+      <select id="editBanco">
+        <option value="">Selecione o banco</option>
+        <option value="Nubank">Nubank</option>
+        <option value="Inter">Inter</option>
+        <option value="Caixa Tem">Caixa Tem</option>
+        <option value="Bradesco">Bradesco</option>
+        <option value="PicPay">PicPay</option>
+        <option value="Mercado Pago">Mercado Pago</option>
+        <option value="Banco do Brasil">Banco do Brasil</option>
+      </select>
+    </div>
+
+    <div class="editar-campos" id="campo3">
+    
+      <label for="editValor">Valor:</label>
+      <input type="number" id="editValor" placeholder="Valor">
+    </div>
+
+    <div class="editar-campos" id="campo4">
+      <label for="acao">Ação:</label>
+      <select id="acao">
+        <option value="deposito">Depósito</option>
+        <option value="saque">Saque</option>
+        <option value="editar">Editar dados</option>
+      </select>
+    </div>
+
+    <div class="editar-botoes">
+      <button onclick="salvarEdicao()" class="salvar">Salvar</button>
+      <button onclick="fecharEditar()" class="excluir">Cancelar</button>
+    </div>
   </div>
+    
+    
+  </section>
+ 
 </body>
 <script src="script.js"></script>
 

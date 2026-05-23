@@ -1,3 +1,5 @@
+
+// Novo
 const CACHE_NAME = "meu-app-v1";
 
 
@@ -134,18 +136,26 @@ async function cacheFirst(req) {
    NETWORK FIRST
 ========================= */
 
-async function networkFirst(req) {
+async function cacheFirst(req) {
 
-  const dynamicCache = await caches.open(DYNAMIC_CACHE);
+  const cache = await caches.match(req);
+
+  if (cache) {
+    return cache;
+  }
 
   try {
+
     const networkResponse = await fetch(req);
-    dynamicCache.put(req, networkResponse.clone());
+
     return networkResponse;
-  }
-  catch (error) {
-    const cacheResponse = await dynamicCache.match(req);
-    return cacheResponse || caches.match("/offline.html");
+
+  } catch (error) {
+
+    if (req.mode === "navigate") {
+      return caches.match("./offline.html");
+    }
+
   }
 
 }

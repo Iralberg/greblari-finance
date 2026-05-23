@@ -128,26 +128,59 @@ li:hover{
 }
 
 #editarBox{
-  position:fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-text-align: center;
-width: 80vw;
-height: 50vh;
-margin: auto;
-background-color: #c7c3c3;
+
+  width: 80%;
+  height: 300px;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+background-color: #c7c4c4;
+z-index: 10px;
 }
+
 #editarBox > h3{
+  display: block;
+ width: 100%;
+
+
 background-color: #12ABE0;
 }
+.editar-box{
+  display: block;
+  flex-flow: column wrap;
+  align-content: flex-start;
+}
+.editar-campos{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .salvar{
+   
+  width: 30%;
   background-color: #26E012;
   border: none;
   padding: 3px;
 }
 .excluir{
-  background-color: red;
+ 
+  width: 30%;
+  background-color: rgb(247, 54, 54);
   border: none;
   padding: 3px;
+}
+#editBanco{
+  width: 50%;
+}
+.container-pop{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 1px;
+  background-color: rgba(255, 254, 254, 0.856);
+}
+.editar-botoes{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
