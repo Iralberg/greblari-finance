@@ -18,7 +18,7 @@
         display: block;
     }
 
-    
+
 
     nav>ul>li {
         margin-left: 10px;
@@ -28,44 +28,52 @@
         display: none;
     }
 
-      .editar-box{
- display: grid;
- grid-template-columns: 50% 50%;
- grid-template-rows: 4;
-}
-.editar-campos{
-    display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.editar-box > h3{
-    grid-row: 1/1;
-    grid-column: 1/-1;
-}
-#campo1{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    justify-content: start;
-}
-#campo2{
- grid-row: 3/4;
-   grid-column: 1/2;
-}
-#campo3{
+    .editar-box {
+        display: grid;
+        grid-template-columns: 50% 50%;
+     
+      
+    }
+
+    .editar-campos {
+        display: inline;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .editar-box>h3 {
+        grid-row: 1/1;
+        grid-column: 1/-1;
+    }
+
+    #campo1 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+       
+    }
+
+    #campo2 {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    #campo3 {
         grid-row: 2/3;
         grid-column: 2/3;
-}
-#campo4{
+    }
+
+    #campo4 {
         grid-row: 3/4;
         grid-column: 2/3;
-}
-.editar-botoes{
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    grid-row:4/5;
-    grid-column: 1/3;
-}
+    }
+
+    .editar-botoes {
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        grid-row: 4/5;
+        grid-column: 1/3;
+    }
 
     .listas>li {
         text-decoration: none;
@@ -106,44 +114,53 @@
         padding: 7px 0px;
         text-align: left;
     }
-  .editar-box{
- display: grid;
- grid-template-columns: 50% 50%;
- grid-template-rows: 4;
-}
-.editar-campos{
-    display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.editar-box > h3{
-    grid-row: 1/1;
-    grid-column: 1/-1;
-}
-#campo1{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    justify-content: start;
-}
-#campo2{
- grid-row: 3/4;
-   grid-column: 1/2;
-}
-#campo3{
+
+    .editar-box {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50px repeat(2, 1fr) 40px;
+    }
+
+    .editar-campos {
+        display: inline;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .editar-box>h3 {
+        grid-row: 1/1;
+        grid-column: 1/-1;
+    }
+
+    #campo1 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        justify-content: start;
+    }
+
+    #campo2 {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    #campo3 {
         grid-row: 2/3;
         grid-column: 2/3;
-}
-#campo4{
+    }
+
+    #campo4 {
         grid-row: 3/4;
         grid-column: 2/3;
-}
-.editar-botoes{
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    grid-row:4/5;
-    grid-column: 1/3;
-}
+    }
+
+    .editar-botoes {
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        grid-row: 4/5;
+        grid-column: 1/3;
+    }
+
     .listas {
         display: block;
     }
